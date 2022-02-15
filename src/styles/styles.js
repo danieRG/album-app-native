@@ -12,6 +12,10 @@ const globalStyles = StyleSheet.create({
     },
     boxDetails:{
       marginBottom:10,
+    },
+    viewImageDetail:{
+      flex:1,
+      marginTop:20,
     }
 });
 

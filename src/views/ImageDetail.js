@@ -12,6 +12,7 @@ import {
   Text
 } from "native-base";
 import { randomString } from '../helpers/randomString';
+import globalStyles from '../styles/styles';
 
 export const ImageDetail = ({ route, navigation}) => {
   const { id } = route.params;
@@ -26,7 +27,7 @@ export const ImageDetail = ({ route, navigation}) => {
   imageDetail.description = randomString(50);
 
   return (
-    <View>
+    <View style={globalStyles.viewImageDetail}>
         <Box alignItems="center">
           <Box maxW="80" rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
           borderColor: "coolGray.600",
