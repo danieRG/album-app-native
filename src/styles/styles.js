@@ -9,6 +9,9 @@ const globalStyles = StyleSheet.create({
     },
     box:{
       backgroundColor:'#08B6D3'
+    },
+    boxDetails:{
+      marginBottom:10,
     }
 });
 

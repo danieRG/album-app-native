@@ -14,3 +14,14 @@ export const loadAlbums = async() => {
 
     return albumsArr;
 }
+
+export const loadAlbumDetail = async(id) => {
+
+    const photos = await axios.get(`https://jsonplaceholder.typicode.com/photos?albumId=${id}`,{
+        params:{
+            _limit: 30
+        }
+    });
+    
+    return  photos.data;
+}

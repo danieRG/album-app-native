@@ -2,23 +2,20 @@ import React, { useEffect }  from 'react';
 import { View , ScrollView} from 'react-native';
 import{
     Box,
-    Image,
-    Center,
-    VStack,
     Pressable,
     Text,
     HStack,
-    Badge,
-    Spacer,
-    Flex
+    Badge
 } from 'native-base';
 import { useDispatch, useSelector } from 'react-redux';
+import { startLoadingAlbumList } from '../actions/album';
+import { useNavigation } from '@react-navigation/native';
 import globalStyles from '../styles/styles';
-import { startLoadingAlbumList } from '../actions/albumList';
-
 
 export const Home = () => {
+
     const dispatch = useDispatch();
+    const navigation = useNavigation();
 
     useEffect(() => {
         dispatch(startLoadingAlbumList());
@@ -26,12 +23,13 @@ export const Home = () => {
     
 
     const albumList = useSelector(state => state.albumList);
-    console.log(albumList);
 
 return <ScrollView>
     { 
-        albumList.map(album =>{
-        return <Pressable key={album.id}>
+        albumList?.map(album =>{
+        return <Pressable 
+            onPress={() => navigation.navigate('AlbumDetail', { id: album.id })}
+            key={album.id}>
             {({
             isHovered,
             isPressed
