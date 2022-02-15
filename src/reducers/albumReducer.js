@@ -3,6 +3,7 @@ import { types } from "../types/types";
 const initialState = {
     albumList: [],
     albumDetail: [],
+    imageDetail: {}
 }
 
 export const albumReducer = (state = initialState, action) => {
@@ -16,6 +17,12 @@ export const albumReducer = (state = initialState, action) => {
             return {
                 ...state,
                 albumDetail: [...action.payload]
+            }
+
+        case types.SET_IMAGE_DETAIL:
+            return {
+                ...state,
+                imageDetail: { ...action.payload }
             }
 
         default:

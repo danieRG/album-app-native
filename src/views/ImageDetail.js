@@ -1,8 +1,23 @@
-import React from 'react';
-import  { Text  } from 'react-native';
+import React, { useEffect } from 'react';
+import  { View, Text } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
+import { LoadingImageDetail } from '../actions/album';
 
-export const ImageDetail = () => {
+export const ImageDetail = ({ route, navigation}) => {
+  const { id } = route.params;
+  const dispatch = useDispatch();
+  
+
+useEffect(() => {
+    dispatch(LoadingImageDetail(id));
+},[id])
+
+const imageDetail = useSelector(state => state.imageDetail);
+
+console.log(imageDetail);
   return (
-    < Text> Image Detail</Text>
+    <View>
+      <Text>{imageDetail.url}</Text>
+    </View>
   )
 }

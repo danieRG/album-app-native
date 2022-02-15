@@ -25,3 +25,8 @@ export const loadAlbumDetail = async(id) => {
     
     return  photos.data;
 }
+
+export const loadImageDetail = async(id) => {
+    const image = await axios.get(`https://jsonplaceholder.typicode.com/photos/${id}`);
+    return image.data;
+}
