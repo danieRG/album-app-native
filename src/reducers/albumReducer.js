@@ -1,7 +1,8 @@
 import { types } from "../types/types";
 
 const initialState = {
-    albumList: []
+    albumList: [],
+    albumDetail: [],
 }
 
 export const albumReducer = (state = initialState, action) => {
@@ -11,6 +12,12 @@ export const albumReducer = (state = initialState, action) => {
                 ...state,
                 albumList: [...action.payload]
             }
+        case types.SET_ALBUM_DETAIL:
+            return {
+                ...state,
+                albumDetail: [...action.payload]
+            }
+
         default:
             return state;
     }
