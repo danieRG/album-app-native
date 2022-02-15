@@ -3,19 +3,11 @@ import  { StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import  { LoadingAlbumDetail } from '../actions/album';
 import { 
-  HStack, 
-  Heading, 
-  Stack, 
-  Box,
-  AspectRatio, 
   Image,
-  Badge, 
-  Link,
   Center,
   ScrollView,
   Pressable,
-  View,
-  Text
+  View
 } from "native-base";
 import globalStyles from '../styles/styles';
 
@@ -34,11 +26,12 @@ export const Album = ({ route, navigation }) => {
   return (
     
   <ScrollView>
-    <View style={styles.container}>
+    <View style={globalStyles.albumContainer}>
       {
         details.map((detail) => { return (
           <Pressable
             onPress={() => navigation.navigate('ImageDetail', {id: detail.id})}
+            key={detail.id}
           >
             {({
               isPressed
@@ -56,7 +49,6 @@ export const Album = ({ route, navigation }) => {
                           scale: isPressed ? 0.96 : 1
                       }]
                       }} 
-                      shadow={3} 
                       source={{
                         uri: `${detail.thumbnailUrl}`
                       }} 
@@ -74,13 +66,3 @@ export const Album = ({ route, navigation }) => {
   </ScrollView>
   )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        marginRight:4,
-        marginTop:2
-    }
-});

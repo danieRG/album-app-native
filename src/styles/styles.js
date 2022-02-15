@@ -21,6 +21,13 @@ const globalStyles = StyleSheet.create({
       fontSize:20,
       fontWeight:'bold',
       marginBottom:10,
+    },
+    albumContainer:{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        marginRight:4,
+        marginTop:2
     }
 });
 

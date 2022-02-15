@@ -25,7 +25,7 @@ export const ImageDetail = ({ route }) => {
 
   const imageDetail = useSelector(state => state.imageDetail);
   imageDetail.description = randomString(50);
-  console.log(imageDetail);
+ 
   return (
     <View style={globalStyles.viewImageDetail}>
       <Box alignItems="center">
@@ -58,9 +58,9 @@ export const ImageDetail = ({ route }) => {
             <AspectRatio w="100%" ratio={16 / 9}>
               <Image 
                 source={{
-                  uri: `${imageDetail.url}`
+                  uri: `${imageDetail.url} `
                 }} 
-                alt="image" />
+                alt={imageDetail.url} />
             </AspectRatio>
             <Center 
               bg="violet.500" 
