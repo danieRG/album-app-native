@@ -1,4 +1,4 @@
-import { loadAlbumes } from "../helpers/loadAlbumes";
+import { loadAlbums } from "../helpers/loadAlbums";
 import { types } from "../types/types";
 
 export const setAlbumList = (albumList) => ({
@@ -8,7 +8,7 @@ export const setAlbumList = (albumList) => ({
 
 export const startLoadingAlbumList = () => {
     return async (dispatch) => {
-        const albumes = await loadAlbumes();
-        dispatch(setAlbumList(albumes));
+        const albums = await loadAlbums();
+        dispatch(setAlbumList(albums));
     }
 }
