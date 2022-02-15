@@ -6,6 +6,9 @@ const globalStyles = StyleSheet.create({
     },
     content:{
         width:'100%',
+    },
+    box:{
+      backgroundColor:'#08B6D3'
     }
 });
 
