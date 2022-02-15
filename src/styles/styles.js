@@ -12,6 +12,22 @@ const globalStyles = StyleSheet.create({
     },
     boxDetails:{
       marginBottom:10,
+    },
+    viewImageDetail:{
+      flex:1,
+      marginTop:20,
+    },
+    textTitle:{
+      fontSize:20,
+      fontWeight:'bold',
+      marginBottom:10,
+    },
+    albumContainer:{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        marginRight:4,
+        marginTop:2
     }
 });
 

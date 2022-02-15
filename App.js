@@ -24,7 +24,7 @@ const App = () => {
               name="Home" 
               component={Home}
               options={{
-                title: 'Home',
+                title: 'Album List',
                 headerStyle: {
                   backgroundColor: '#121A2B',
                 },
