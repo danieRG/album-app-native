@@ -16,6 +16,11 @@ const globalStyles = StyleSheet.create({
     viewImageDetail:{
       flex:1,
       marginTop:20,
+    },
+    textTitle:{
+      fontSize:20,
+      fontWeight:'bold',
+      marginBottom:10,
     }
 });
 
