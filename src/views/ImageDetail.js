@@ -57,10 +57,8 @@ export const ImageDetail = ({ route }) => {
           <Box>
             <AspectRatio w="100%" ratio={16 / 9}>
               <Image 
-                source={{
-                  uri: `${imageDetail.url} `
-                }} 
-                alt={imageDetail.url} />
+                src={imageDetail.url}
+                alt="Image Detail" />
             </AspectRatio>
             <Center 
               bg="violet.500" 

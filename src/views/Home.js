@@ -52,9 +52,7 @@ return (
                             <Box>
                                 <Image 
                                    
-                                    source={{
-                                        uri: 'https://via.placeholder.com/150/92c952'
-                                    }} 
+                                    src='https://via.placeholder.com/150/92c952'
                                     alt="Alternate Text" 
                                     size="sm" 
                                 />

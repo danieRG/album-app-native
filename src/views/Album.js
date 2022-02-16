@@ -49,9 +49,7 @@ export const Album = ({ route, navigation }) => {
                           scale: isPressed ? 0.96 : 1
                       }]
                       }} 
-                      source={{
-                        uri: `${detail.thumbnailUrl}`
-                      }} 
+                      src={detail.thumbnailUrl} 
                       alt={detail.thumbnailUrl} 
                       size={120} 
                       />
