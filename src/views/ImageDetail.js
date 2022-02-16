@@ -24,7 +24,6 @@ export const ImageDetail = ({ route }) => {
   },[id])
 
   const imageDetail = useSelector(state => state.imageDetail);
-  imageDetail.description = randomString(50);
  
   return (
     <View style={globalStyles.viewImageDetail}>
@@ -95,7 +94,7 @@ export const ImageDetail = ({ route }) => {
                 </Heading>
               </Stack>
               <Text fontWeight="400">
-                This is a random string {imageDetail.description}
+                This is a random string {randomString(50)}
               </Text>
             </Stack>
           </Box>
