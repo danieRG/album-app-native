@@ -114,7 +114,6 @@
 				4336367B58ABAE6F8045E682 /* Pods-albumApp-albumAppTests.debug.xcconfig */,
 				3FA5BFBAFCE648E5EA298A7C /* Pods-albumApp-albumAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
